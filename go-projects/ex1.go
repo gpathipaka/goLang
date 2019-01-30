@@ -1,8 +1,11 @@
 package main
 
-import ("fmt")
+import (
+	"fmt"
+)
 
 func main() {
+
 	var a = "Hello"
 	fmt.Println(a)
 
@@ -17,4 +20,5 @@ func main() {
 
 	f := "short"
 	fmt.Println(f)
+
 }
