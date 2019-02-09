@@ -9,16 +9,19 @@ type Person struct {
 
 func main() {
 	fmt.Println("Hello")
-
+	m := make(map[string]Person)
 	p1 := Person{
 		firstName:        "Gangadhar",
 		lastName:         "Pathipaka",
 		favIceCreamFlavs: []string{"buttorScotch", "Vennila"},
 	}
 
-	for i, v := range p1.favIceCreamFlavs {
-		fmt.Println(i, v)
-	}
-	fmt.Println(p1)
+	m[p1.lastName] = p1
 
+	for k, v := range m {
+		fmt.Println(k)
+		for i, val := range v.favIceCreamFlavs {
+			fmt.Printf("\t %v \t %v\n", i, val)
+		}
+	}
 }
